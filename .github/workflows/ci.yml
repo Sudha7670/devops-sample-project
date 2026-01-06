@@ -1,0 +1,27 @@
+name: CI Pipeline - DevOps Sample Project
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: List files
+        run: ls -l
+
+      - name: Validate HTML files
+        run: |
+          echo "Validating HTML files..."
+          test -f index.html
+          test -f about.html
+          test -f contact.html
+          echo "HTML validation successful ✅"
+
