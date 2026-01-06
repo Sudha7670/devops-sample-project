@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About - DevOps Sample Project</title>
+  <title>Home | DevOps Sample Project</title>
 
   <style>
     body {
@@ -9,51 +9,68 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
-      min-height: 100vh;
+      height: 100vh;
+      display: flex;
     }
 
-    nav {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 15px;
+    /* Left Sidebar */
+    .sidebar {
+      width: 220px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
     }
 
-    nav a {
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
       color: white;
-      margin-right: 20px;
       text-decoration: none;
+      margin: 15px 0;
       font-weight: bold;
     }
 
-    nav a:hover {
+    .sidebar a:hover {
       text-decoration: underline;
     }
 
+    /* Main Content */
     .content {
+      flex: 1;
       padding: 60px;
+    }
+
+    footer {
+      margin-top: 50px;
       text-align: center;
+      font-size: 14px;
+      opacity: 0.8;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Navigation Menu -->
-  <nav>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>DevOps</h2>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Page Content -->
-  <div class="content">
-    <h1>About This Project</h1>
-    <p>This is a beginner-friendly DevOps sample project.</p>
-    <p>Built using Linux, Git, and basic web technologies.</p>
   </div>
-<footer style="text-align:center; padding:20px; background:rgba(0,0,0,0.5);">
-  <p>© 2026 DevOps Sample Project</p>
-</footer>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>Welcome to DevOps World</h1>
+    <p>This project demonstrates Git, GitHub, Pull Requests, and CI/CD using GitHub Actions.</p>
+
+    <footer>
+      © 2026 DevOps Sample Project
+    </footer>
+  </div>
 
 </body>
 </html>
-
