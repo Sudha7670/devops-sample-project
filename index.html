@@ -6,113 +6,77 @@
 
 <style>
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body {
-  display: flex;              /* ⭐ THIS IS THE KEY */
-  height: 100vh;
-  background: #f4f6f9;
-}
-
-/* LEFT SIDEBAR */
-.sidebar {
-  width: 240px;
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
   background: #0f172a;
-  color: #fff;
-  padding: 25px;
 }
 
-.sidebar h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #38bdf8;
-}
-
-.sidebar a {
-  display: block;
-  padding: 12px;
-  margin-bottom: 10px;
-  color: #cbd5e1;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.sidebar a:hover,
-.sidebar a.active {
-  background: #1e293b;
-  color: #38bdf8;
-}
-
-/* RIGHT CONTENT */
-.main {
-  flex: 1;
-  padding: 40px;
-}
-
-.header {
-  font-size: 26px;
+/* LEFT LOGO */
+.logo {
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* RIGHT MENU */
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  color: #38bdf8;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 60px;
+  background: #f4f6f9;
+  min-height: calc(100vh - 70px);
+}
+
+h1 {
   color: #0f172a;
+  margin-bottom: 15px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-footer {
-  margin-top: 40px;
-  text-align: center;
-  color: #64748b;
-  font-size: 14px;
+p {
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.6;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LEFT MENU -->
-<div class="sidebar">
-  <h2>DevOps</h2>
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</div>
+<header>
+  <div class="logo">DevOps</div>
 
-<!-- RIGHT CONTENT -->
-<div class="main">
-  <div class="header">DevOps Dashboard</div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <div class="cards">
-    <div class="card">
-      <h3>CI/CD</h3>
-      <p>GitHub Actions automated pipeline.</p>
-    </div>
-    <div class="card">
-      <h3>GitHub</h3>
-      <p>Branching, PRs, and reviews.</p>
-    </div>
-    <div class="card">
-      <h3>Linux</h3>
-      <p>Ubuntu WSL based development.</p>
-    </div>
-  </div>
-
-  <footer>© 2026 DevOps Sample Project</footer>
-</div>
+<main>
+  <h1>Welcome to DevOps Portal</h1>
+  <p>This project demonstrates Git, GitHub, Pull Requests, and CI/CD pipelines.</p>
+</main>
 
 </body>
 </html>
