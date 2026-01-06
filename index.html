@@ -1,33 +1,57 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>DevOps Sample Project</title>
+
   <style>
-    nav {
-      background-color: #333;
-      padding: 10px;
+    /* Full page background */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      min-height: 100vh;
     }
+
+    /* Navigation bar */
+    nav {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+    }
+
     nav a {
       color: white;
-      margin-right: 15px;
+      margin-right: 20px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* Content box */
+    .content {
+      padding: 60px;
+      text-align: center;
+    }
   </style>
+
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation Menu -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1>Welcome to DevOps</h1>
-  <p>This site is deployed using Linux & Git.</p>
+  <!-- Page Content -->
+  <div class="content">
+    <h1>Welcome to DevOps</h1>
+    <p>This site is deployed using Linux & Git.</p>
+  </div>
 
 </body>
 </html>
