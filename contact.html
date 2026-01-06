@@ -1,73 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact | DevOps Sample Project</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      height: 100vh;
-      display: flex;
-    }
-
-    .sidebar {
-      width: 220px;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-    }
-
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 15px 0;
-      font-weight: bold;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    .content {
-      flex: 1;
-      padding: 60px;
-    }
-
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-  </style>
+  <title>Contact | DevOps Portal</title>
 </head>
 
 <body>
-
   <div class="sidebar">
     <h2>DevOps</h2>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
   </div>
 
-  <div class="content">
-    <h1>Contact Us</h1>
-    <p>Email: devops@example.com</p>
-    <p>Location: Hyderabad, India</p>
+  <div class="main">
+    <div class="header">Contact</div>
 
-    <footer>
-      © 2026 DevOps Sample Project
-    </footer>
+    <div class="card">
+      <p><strong>Email:</strong> devops@example.com</p>
+      <p><strong>Location:</strong> Hyderabad, India</p>
+    </div>
+
+    <footer>© 2026 DevOps Sample Project</footer>
   </div>
-
 </body>
 </html>

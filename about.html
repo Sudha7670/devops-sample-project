@@ -1,73 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About | DevOps Sample Project</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      height: 100vh;
-      display: flex;
-    }
-
-    .sidebar {
-      width: 220px;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-    }
-
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 15px 0;
-      font-weight: bold;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    .content {
-      flex: 1;
-      padding: 60px;
-    }
-
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-  </style>
+  <title>About | DevOps Portal</title>
+  <link rel="stylesheet" href="index.html">
 </head>
 
 <body>
-
   <div class="sidebar">
     <h2>DevOps</h2>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="contact.html">Contact</a>
   </div>
 
-  <div class="content">
-    <h1>About This Project</h1>
-    <p>This is a beginner-to-intermediate DevOps project.</p>
-    <p>You will learn Linux, GitHub, Pull Requests, CI/CD, and automation.</p>
+  <div class="main">
+    <div class="header">About This Project</div>
 
-    <footer>
-      © 2026 DevOps Sample Project
-    </footer>
+    <div class="card">
+      <p>
+        This project demonstrates a real DevOps workflow including
+        Linux, GitHub, Pull Requests, CI/CD pipelines, and automation.
+      </p>
+    </div>
+
+    <footer>© 2026 DevOps Sample Project</footer>
   </div>
-
 </body>
 </html>
