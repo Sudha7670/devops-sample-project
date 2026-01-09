@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact | DevOps Portal</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #0f172a;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  color: #38bdf8;
+}
+
+/* MAIN */
+main {
+  padding: 60px;
+  background: #f4f6f9;
+  min-height: calc(100vh - 70px);
+}
+
+h1 {
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+form {
+  max-width: 450px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #334155;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: #0f172a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e293b;
+}
+
+#result {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DevOps</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Contact Us</h1>
+
+  <form onsubmit="submitForm(event)">
+    <label>Name</label>
+    <input type="text" id="name" required>
+
+    <label>Mobile Number</label>
+    <input type="text" id="mobile" required>
+
+    <label>Email</label>
+    <input type="email" id="email" required>
+
+    <label>Message</label>
+    <textarea id="message" rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result"></div>
+</main>
+
+<script>
+function submitForm(event) {
+  event.preventDefault(); // STOP page reload
+
+  const data = {
+    name: document.getElementById("name").value,
+    mobile: document.getElementById("mobile").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
+
+  fetch("http://localhost:5000/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(response => {
+    document.getElementById("result").innerText = response.message;
+
+    // Clear form fields after success
+    document.getElementById("name").value = "";
+    document.getElementById("mobile").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+  })
+  .catch(() => {
+    document.getElementById("result").innerText = "Error sending message";
+  });
+}
+</script>
+
+
+</body>
+</html>
