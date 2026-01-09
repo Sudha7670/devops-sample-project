@@ -20,8 +20,8 @@ jobs:
       - name: Validate HTML files
         run: |
           echo "Validating HTML files..."
-          test -f index.html
-          test -f about.html
-          test -f contact.html
+          test -f frontend/index.html
+          test -f frontend/about.html
+          test -f frontend/contact.html
           echo "HTML validation successful ✅"
 
